@@ -1,0 +1,67 @@
+@import url('https://fonts.googleapis.com/css2?family=Gaegu:wght@700&family=Nanum+Gothic:wght@400;700&display=swap');
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body, html { width: 100%; height: 100%; font-family: 'Nanum Gothic', sans-serif; display: flex; justify-content: center; align-items: center; overflow: hidden;}
+@keyframes gradientBG { 0% { background-position: 0% 50%; } 50% { background-position: 100% 50%; } 100% { background-position: 0% 50%; } }
+body { background: linear-gradient(-45deg, #fff5f5, #f0f9ff, #faf5ff, #fff9db); background-size: 400% 400%; animation: gradientBG 15s ease infinite; }
+
+.dashboard-wrapper { display: flex; width: 95%; height: 90%; max-width: 1400px; border-radius: 50px; overflow: hidden; box-shadow: 0 40px 80px rgba(0,0,0,0.15); background: rgba(255, 255, 255, 0.9); }
+
+/* 사이드바 설정 */
+.sidebar { 
+    width: 120px; 
+    background: rgba(255, 245, 245, 0.5); 
+    display: flex; 
+    flex-direction: column; 
+    align-items: center; 
+    padding: 40px 0; 
+    border-right: 1px solid rgba(255, 228, 230, 0.5);
+    justify-content: space-between; 
+}
+
+/* 상단 영역 (캐릭터+메뉴) */
+.sidebar-top { display: flex; flex-direction: column; align-items: center; gap: 40px; width: 100%; }
+
+.char-section { display: flex; flex-direction: column; align-items: center; width: 100%; }
+.char-icon { width: 80px; height: 80px; background: white; border-radius: 50%; display: flex; justify-content: center; align-items: center; font-size: 45px; margin-bottom: 10px; border: 3px solid #fb7185; }
+
+/* 🌟 Poly 글자 수정 완료 (네모 블록 방지 + 중앙 정렬 + 그라데이션) 🌟 */
+.char-name { 
+    font-size: 20px; 
+    font-weight: bold; 
+    margin-bottom: 40px; 
+    display: inline-block; /* 텍스트 크기만큼만 배경 적용 (네모 방지) */
+    background: linear-gradient(45deg, #fb7185, #fda4af);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+}
+
+.menu-icons { display: flex; flex-direction: column; gap: 30px; font-size: 32px; }
+.menu-icons a, .sidebar-bottom a { text-decoration: none; transition: 0.2s; display: block; }
+.menu-icons a:hover, .sidebar-bottom a:hover { transform: scale(1.1); }
+
+/* 하단 영역 (설정 아이콘) */
+.sidebar-bottom { font-size: 32px; }
+
+/* 나머지 대시보드 스타일 */
+.main-container { flex: 1; padding: 50px; display: flex; flex-direction: column; }
+.dashboard-logo { font-size: 50px; font-family: 'Gaegu', cursive; color: #fb7185; margin-bottom: 20px; text-align: center;}
+.prompt-bar { display: flex; background: rgba(248, 250, 252, 0.8); border-radius: 20px; padding: 15px 30px; border: 1px solid rgba(241, 245, 249, 0.5); margin-bottom: 40px; align-items: center; }
+.prompt-bar input { flex: 1; border: none; background: transparent; outline: none; font-size: 18px; font-family: 'Nanum Gothic', sans-serif; }
+.card-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 25px; flex: 1; }
+.card-link { text-decoration: none; color: inherit; display: block; height: 100%;}
+.card { height: 100%; padding: 30px; border-radius: 35px; transition: 0.3s; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; box-shadow: 0 10px 20px rgba(0,0,0,0.03);}
+.card:hover { transform: translateY(-10px); box-shadow: 0 15px 30px rgba(0,0,0,0.08); }
+.card h3 { font-size: 26px; margin-bottom: 10px; font-weight: 700;}
+.card p { font-size: 15px; opacity: 0.8; line-height: 1.4; }
+.p-pink { background: rgba(255, 241, 242, 0.9); color: #fb7185; }
+.p-blue { background: rgba(240, 249, 255, 0.9); color: #0ea5e9; }
+.p-yellow { background: rgba(254, 252, 232, 0.9); color: #eab308; }
+.p-purple { background: rgba(245, 243, 255, 0.9); color: #8b5cf6; }
+.p-green { background: rgba(240, 253, 244, 0.9); color: #22c55e; }
+.p-grey { background: rgba(241, 245, 249, 0.9); color: #475569; }
+
+
+
