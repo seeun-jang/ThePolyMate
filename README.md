@@ -2,57 +2,45 @@
 
 > **"사용자의 성장을 돕고 일상을 케어하는 초개인화 AI 에이전트 서비스"**
 
-한국폴리텍대학 서울정수캠퍼스 
-인공지능 소프트웨어학과
-2601110299 장세은
-웹 프로그래밍 기말 과제 (자유주제 홈페이지 만들기)
+**한국폴리텍대학 서울정수캠퍼스 인공지능소프트웨어학과**  
+**2601110299 장세은**
 
 ---
 
 ## 💡 Project Concept
-Poly-Mate(폴리메이트)는 단순한 정보 제공용 챗봇을 넘어, 사용자의 24시간을 함께하는 지능형 라이프 에이전트입니다. HTML5, CSS3, Vanilla JS를 활용하여 SPA(Single Page Application) 구조로 설계되었으며, 페이지 이동 시의 딜레이를 없애 실제 모바일 앱을 사용하는 듯한 매끄러운 UX를 제공합니다.
+Poly-Mate는 단순한 챗봇을 넘어 사용자의 24시간을 함께하는 지능형 라이프 에이전트입니다. SPA(Single Page Application) 구조로 설계되어 실제 앱처럼 끊김 없는 UX를 제공합니다.
 
-## 🎨 Design Philosophy: "Cozy Tech"
-차가운 기술의 느낌을 배제하고, 사용자에게 심리적 안정감과 친근함을 주는 '감성 기술'을 지향합니다.
-- **Animal Mate**: 사용자만의 단짝 친구인 강아지(🐶) 메이트 'Poly'가 화면 중앙에서 대화를 이끌며 정서적 유대감을 형성합니다.
-- **Soft UI/UX**: 전체적으로 둥근 모서리(Border-radius)와 부드러운 그림자(Soft Box-shadow)를 사용하여 피로도를 낮췄습니다.
+## 🎨 Design Strategy: "Cozy Tech"
+*   **Animal Mate**: 귀여운 강아지 메이트 'Poly'가 대화를 이끌며 정서적 유대감을 형성합니다.
+*   **Soft UI**: 파스텔 톤의 컬러와 둥근 모서리, 부드러운 그림자를 사용하여 사용자 피로도를 낮췄습니다.
+*   **Icon Library**: Flaticon의 고품질 아이콘을 활용하여 직관적이고 부드러운 디자인을 완성했습니다.
 
-## 🚀 Core Features & Custom Widgets (6대 섹션)
-각 섹션은 단순 텍스트 대화가 아닌, 목적에 맞는 **시각화된 커스텀 위젯**을 제공하여 정보의 직관성을 극대화했습니다.
+## 🚀 Core Features (6대 섹션)
+각 섹션은 목적에 맞는 **시각화 위젯**을 통해 정보를 직관적으로 전달합니다.
 
-1. **📚 학습 (Learning)**
-   - **기능**: 전공 학습 로드맵 분석 및 취약점 파악.
-   - **위젯**: 성취도 퍼센티지를 보여주는 프로그레스 바(Progress Bar) 및 하이라이트된 오답노트 UI.
-2. **🗓️ 일정 (Schedule)**
-   - **기능**: 데일리 루틴 및 다가오는 중요 일정(시험, 강연) 관리.
-   - **위젯**: 타임라인 기반의 세련된 스케줄 티켓 UI.
-3. **🥗 건강 (Wellness)**
-   - **기능**: Poly Pick! 맞춤형 식단 추천 및 영양 관리.
-   - **위젯**: 단백질, 탄수화물, 지방의 비율을 색상으로 직관적으로 보여주는 영양소 밸런스 그래프.
-4. **💡 영감 (Inspiration)**
-   - **기능**: 사용자의 취향을 반영한 트렌드 아카이빙.
-   - **위젯**: 파스텔톤 중심의 UI/UX 디자인 무드보드 제공.
-5. **✈️ 여행 (Travel)**
-   - **기능**: 해외 강연 및 드라이브 여행 등 맞춤형 경로 설계.
-   - **위젯**: 항공사별 소요 시간과 가격을 한눈에 비교하는 실시간 항공권 비교 티켓 UI.
-6. **🔖 북마크 (Bookmark)**
-   - **기능**: 스크랩해둔 주요 링크와 아이디어 저장소.
-   - **위젯**: 플랫폼(Github, Youtube 등) 태그가 분류된 깔끔한 리스트 UI.
+1. **📚 학습 (Learning)**: 성취도 프로그레스 바 및 맞춤형 오답노트 UI.
+2. **🗓️ 일정 (Schedule)**: 타임라인 기반의 세련된 스케줄 티켓 UI.
+3. **🥗 건강 (Wellness)**: 영양소 밸런스를 직관적으로 보여주는 그래프 위젯.
+4. **💡 영감 (Inspiration)**: 파스텔톤 중심의 UI/UX 디자인 무드보드.
+5. **✈️ 여행 (Travel)**: 항공권 가격 및 소요 시간 비교 티켓 UI.
+6. **📓 다이어리 (Diary)**: 소중한 일상 기록과 생각 저장소.
 
 ## 🌌 3-Mood Theme System
-사용자의 그날 기분에 따라 전체 웹사이트의 분위기가 완벽하게 전환되는 동적 테마 시스템을 구현했습니다.
+사용자의 상황과 기분에 따라 전체 분위기가 전환되는 동적 테마를 구현했습니다.
 
-- **🏠 Home (기본)**: 포근한 이불 속을 연상케 하는 웜 파스텔톤의 영롱한 애니메이션 그라데이션 배경.
-- **🚗 Drive (여행)**: 자연환경이 담긴 산뜻한 고화질 배경 (블러 처리된 글래스모피즘 대시보드 적용).
-- **🚀 Space (우주)**: 끝없는 상상력을 자극하는 신비롭고 영롱한 은하수 성운 배경과 네온 포인트 컬러 적용.
+*   **🏠 Home**: 포근한 웜 파스텔톤 배경.
+*   **🚗 Drive**: 자연환경 기반의 산뜻한 글래스모피즘 UI.
+*   **🚀 Space**: 신비로운 은하수 배경과 네온 포인트 컬러.
 
 ## 🛠 Tech Stack
-- **Frontend**: HTML5, CSS3, JavaScript (ES6)
-- **Architecture**: Single Page Application (SPA) DOM Manipulation
-- **Styling**: CSS Flexbox/Grid, CSS Animations, Glassmorphism UI
+*   **Frontend**: HTML5, CSS3, JavaScript (ES6)
+*   **Deployment**: GitHub Pages
+*   **Resources**: Flaticon Icons (Freepik, Lizel Arina, vectorsmarket15 등)
 
-## 🌟 Why Poly-Mate? (Service Differentiation)
+---
 
-1. **감성적 페르소나 (Emotional AI)**: 딱딱한 인터페이스가 아닌 친근한 강아지 'Poly'와의 상호작용을 통해 사용자의 심리적 장벽을 허물고 서비스 체류 시간을 높입니다.
-2. **시각적 데이터 요약 (Visual Widget)**: 모든 대답은 텍스트에만 의존하지 않고, 학습 성취도 그래프나 항공권 비교표 등 목적에 최적화된 위젯으로 출력되어 정보 인지 속도를 혁신적으로 개선했습니다.
-3. **환경 기반 경험 설계 (Contextual UX)**: 사용자의 활동 목적에 따라 '집-여행-상상'이라는 세 가지 공간적 테마를 제공하여, AI 서비스가 단순한 도구를 넘어 하나의 '공간'이 되는 경험을 선사합니다.
+### 🔗 Design Resource Attribution
+본 프로젝트의 아이콘은 저작권 규정에 따라 **Flaticon**의 리소스를 활용하였습니다.
+- Puppy/Settings/Message/Book/Agenda/Salad/Knowledge/Travel icons by **Freepik**
+- Theme icons by **Lizel Arina**
+- Isometric icons by **vectorsmarket15**

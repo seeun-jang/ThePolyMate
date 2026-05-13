@@ -5,24 +5,42 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>The Poly-Mate | 메인</title>
     <link rel="stylesheet" href="styles/main.css">
+    <style>
+        /* 추가된 아이콘 정렬하기 */
+        .icon-img {
+            vertical-align: middle;
+        }
+        .sidebar .icon-img {
+            width: 28px;
+        }
+        .card h3 .icon-img {
+            width: 26px;
+            margin-right: 8px;
+        }
+    </style>
 </head>
 <body>
     <div class="dashboard-wrapper">
         <nav class="sidebar">
             <div class="sidebar-top">
                 <div class="char-section">
-                    <div class="char-icon">🐶</div>
+                    <!-- 웰시코기 로고 -->
+                    <div class="char-icon">
+                        <img src="images/corgi.png" alt="Poly 로고" style="width: 50px; height: auto;">
+                    </div>
                     <p class="char-name">Poly</p>
                 </div>
                 <div class="menu-icons">
-                    <a href="#" title="북마크">🔖</a>
-                    <a href="theme.html" title="테마">🎨</a>
-                    <a href="#" title="기록">⏱️</a>
+                    <!-- 사이드바 메뉴 아이콘 -->
+                    <a href="#" title="북마크"><img src="images/bookmark (1).png" alt="북마크" class="icon-img"></a>
+                    <a href="theme.html" title="테마"><img src="images/themes.png" alt="테마" class="icon-img"></a>
+                    <a href="#" title="기록"><img src="images/notepad.png" alt="기록" class="icon-img"></a>
                 </div>
             </div>
             
             <div class="sidebar-bottom">
-                <a href="#" title="설정">⚙️</a>
+                <!-- 설정 아이콘 -->
+                <a href="#" title="설정"><img src="images/settings.png" alt="설정" class="icon-img"></a>
             </div>
         </nav>
 
@@ -31,28 +49,75 @@
                 <h1 class="dashboard-logo">Poly-Mate</h1>
                 <div class="prompt-bar">
                     <input type="text" placeholder="user, 오늘 하루는 어땠어? 나한테 말해줘!">
-                    <button>🚀</button>
+                    <!-- 전송 버튼 말풍선 아이콘 -->
+                    <button style="border: none; background: transparent; cursor: pointer; padding: 5px;">
+                        <img src="images/chat.png" alt="전송" style="width: 30px; vertical-align: middle;">
+                    </button>
                 </div>
             </header>
 
             <div class="card-grid">
+                <!-- 다이어리 섹션 -->
                 <a href="learning.html" class="card-link">
                     <div class="card p-pink">
-                        <h3>📚 학습</h3>
+                        <h3><img src="images/books.png" alt="학습" class="icon-img">학습</h3>
                         <p>성취도 그래프 및 맞춤형 오답노트</p>
                     </div>
                 </a>
-                <a href="#" class="card-link"><div class="card p-blue"><h3>🗓️ 일정</h3><p>스케줄 관리</p></div></a>
-                <a href="#" class="card-link"><div class="card p-yellow"><h3>🥗 건강</h3><p>추천 식단</p></div></a>
-                <a href="#" class="card-link"><div class="card p-purple"><h3>💡 영감</h3><p>디자인 트렌드</p></div></a>
-                <a href="#" class="card-link"><div class="card p-green"><h3>✈️ 여행</h3><p>해외 강연 정보</p></div></a>
-                <a href="#" class="card-link"><div class="card p-grey"><h3>🔖 북마크</h3><p>저장한 기록</p></div></a>
+                <a href="#" class="card-link">
+                    <div class="card p-blue">
+                        <h3><img src="images/notebook.png" alt="일정" class="icon-img">일정</h3>
+                        <p>스케줄 관리</p>
+                    </div>
+                </a>
+                <a href="#" class="card-link">
+                    <div class="card p-yellow">
+                        <h3><img src="images/salad.png" alt="건강" class="icon-img">건강</h3>
+                        <p>추천 식단</p>
+                    </div>
+                </a>
+                <a href="#" class="card-link">
+                    <div class="card p-purple">
+                        <h3><img src="images/light-bulb.png" alt="영감" class="icon-img">영감</h3>
+                        <p>디자인 트렌드</p>
+                    </div>
+                </a>
+                <a href="#" class="card-link">
+                    <div class="card p-green">
+                        <h3><img src="images/airplane.png" alt="여행" class="icon-img">여행</h3>
+                        <p>해외 여행 정보</p>
+                    </div>
+                </a>
+                <a href="#" class="card-link">
+                    <div class="card p-grey">
+                        <h3><img src="images/romantic-novel.png" alt="다이어리" class="icon-img">다이어리</h3>
+                        <p>저장한 기록</p>
+                    </div>
+                </a>
             </div>
+
+            <!-- 아이콘에 쓴 출처 -->
+            <footer style="margin-top: 60px; padding-bottom: 20px; text-align: center; font-size: 11px; color: #a0a0a0;">
+                <details style="cursor: pointer;">
+                    <summary>디자인 리소스 출처 (Flaticon) 펼쳐보기</summary>
+                    <ul style="list-style: none; padding: 0; margin-top: 10px; line-height: 1.8;">
+                        <li><a href="https://www.flaticon.com/free-icons/puppy" target="_blank" style="color: #a0a0a0; text-decoration: none;">Puppy icons created by Freepik</a></li>
+                        <li><a href="https://www.flaticon.com/free-icons/theme" target="_blank" style="color: #a0a0a0; text-decoration: none;">Theme icons created by Lizel Arina</a></li>
+                        <li><a href="https://www.flaticon.com/free-icons/settings" target="_blank" style="color: #a0a0a0; text-decoration: none;">Settings icons created by Freepik</a></li>
+                        <li><a href="https://www.flaticon.com/free-icons/message" target="_blank" style="color: #a0a0a0; text-decoration: none;">Message icons created by Freepik</a></li>
+                        <li><a href="https://www.flaticon.com/free-icons/book" target="_blank" style="color: #a0a0a0; text-decoration: none;">Book icons created by Freepik</a></li>
+                        <li><a href="https://www.flaticon.com/free-icons/agenda" target="_blank" style="color: #a0a0a0; text-decoration: none;">Agenda icons created by Freepik</a></li>
+                        <li><a href="https://www.flaticon.com/free-icons/salad" target="_blank" style="color: #a0a0a0; text-decoration: none;">Salad icons created by Freepik</a></li>
+                        <li><a href="https://www.flaticon.com/free-icons/knowledge" target="_blank" style="color: #a0a0a0; text-decoration: none;">Knowledge icons created by Freepik</a></li>
+                        <li><a href="https://www.flaticon.com/free-icons/travel" target="_blank" style="color: #a0a0a0; text-decoration: none;">Travel icons created by Freepik</a></li>
+                        <li><a href="https://www.flaticon.com/free-icons/isometric" target="_blank" style="color: #a0a0a0; text-decoration: none;">Isometric icons created by vectorsmarket15</a></li>
+                    </ul>
+                </details>
+            </footer>
         </main>
     </div>
 </body>
 </html>
-
 
 
 
