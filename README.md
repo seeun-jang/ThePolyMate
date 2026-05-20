@@ -5,6 +5,8 @@
 *(웹프로그래밍 기초 1학년 1학기 '자유주제로 홈페이지 만들기')*
 
 ---
+<img width="2559" height="1382" alt="스크린샷 2026-05-13 210908" src="https://github.com/user-attachments/assets/4427f606-bb90-47d7-a4d2-71c75ef121d7" />  
+<img width="2559" height="1384" alt="스크린샷 2026-05-13 210953" src="https://github.com/user-attachments/assets/dd42294e-e6a3-4b5a-92cf-0b9d8d1ac19c" />  
 
 ## 1. 프로젝트 개요
 사용자의 일상과 성장을 돕는 '초개인화 AI 에이전트'  
@@ -33,6 +35,9 @@
 
 * **초개인화 상호작용:** 사용자 데이터를 분석하여 상황에 맞는 질문과 대답을 스스로 생성하는 지능형 에이전트 구현.
 * **자가 치유(Self-Healing) 시스템:** 대화 맥락이나 데이터 매칭 중 발생하는 오류를 시스템이 스스로 인지하고 교정하여, 끊김 없고 자연스러운 사용자 경험(UX) 제공.
+
+## 5. 이용 방법
+[The Poly-Mate 웹페이지](https://seeun-jang.github.io/ThePolyMate/)
 
 ---
 
