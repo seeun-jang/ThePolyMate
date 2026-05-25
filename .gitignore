@@ -1,0 +1,14 @@
+# OS 관련 임시 파일 제외
+.DS_Store
+Thumbs.db
+
+# 에디터 및 개발 툴 설정 파일 제외
+.vscode/
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+
+# 로그 파일
+*.log
