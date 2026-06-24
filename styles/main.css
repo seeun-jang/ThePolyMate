@@ -4,8 +4,28 @@
 body, html { width: 100%; height: 100%; font-family: 'Nanum Gothic', sans-serif; display: flex; justify-content: center; align-items: center; overflow: hidden;}
 @keyframes gradientBG { 0% { background-position: 0% 50%; } 50% { background-position: 100% 50%; } 100% { background-position: 0% 50%; } }
 body { background: linear-gradient(-45deg, #fff5f5, #f0f9ff, #faf5ff, #fff9db); background-size: 400% 400%; animation: gradientBG 15s ease infinite; }
+body[data-theme="drive"] {
+    background-image: linear-gradient(rgba(8, 47, 73, 0.28), rgba(8, 47, 73, 0.2)), url('https://images.unsplash.com/photo-1501785888041-af3ef285b470?w=2000');
+    background-size: cover;
+    background-position: center;
+    animation: none;
+}
+body[data-theme="space"] {
+    background-image: linear-gradient(rgba(2, 6, 23, 0.74), rgba(15, 23, 42, 0.78)), url('https://images.unsplash.com/photo-1446776653964-20c1d3a81b06?w=2000');
+    background-size: cover;
+    background-position: center;
+    animation: none;
+}
 
 .dashboard-wrapper { display: flex; width: 95%; height: 90%; max-width: 1400px; border-radius: 50px; overflow: hidden; box-shadow: 0 40px 80px rgba(0,0,0,0.15); background: rgba(255, 255, 255, 0.9); }
+body[data-theme="drive"] .dashboard-wrapper {
+    background: linear-gradient(150deg, rgba(255,255,255,0.88), rgba(236,253,245,0.82));
+    box-shadow: 0 44px 84px rgba(14, 116, 144, 0.22);
+}
+body[data-theme="space"] .dashboard-wrapper {
+    background: linear-gradient(150deg, rgba(15, 23, 42, 0.82), rgba(30, 41, 59, 0.78));
+    box-shadow: 0 44px 84px rgba(2, 6, 23, 0.58);
+}
 
 /* 사이드바 설정 */
 .sidebar { 
@@ -17,6 +37,13 @@ body { background: linear-gradient(-45deg, #fff5f5, #f0f9ff, #faf5ff, #fff9db); 
     padding: 40px 0; 
     border-right: 1px solid rgba(255, 228, 230, 0.5);
     justify-content: space-between; 
+}
+body[data-theme="drive"] .sidebar {
+    background: linear-gradient(180deg, rgba(224, 242, 254, 0.78), rgba(240, 253, 244, 0.58));
+}
+body[data-theme="space"] .sidebar {
+    background: linear-gradient(180deg, rgba(30, 41, 59, 0.82), rgba(15, 23, 42, 0.72));
+    border-right-color: rgba(148, 163, 184, 0.22);
 }
 
 /* 상단 영역 (캐릭터+메뉴) */
@@ -36,6 +63,13 @@ body { background: linear-gradient(-45deg, #fff5f5, #f0f9ff, #faf5ff, #fff9db); 
     -webkit-text-fill-color: transparent;
     color: transparent;
 }
+body[data-theme="space"] .char-name {
+    background: linear-gradient(45deg, #c4b5fd, #38bdf8);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+}
 
 .menu-icons { display: flex; flex-direction: column; gap: 30px; font-size: 32px; }
 .menu-icons a, .sidebar-bottom a { text-decoration: none; transition: 0.2s; display: block; }
@@ -49,10 +83,21 @@ body { background: linear-gradient(-45deg, #fff5f5, #f0f9ff, #faf5ff, #fff9db); 
 .dashboard-logo { font-size: 50px; font-family: 'Gaegu', cursive; color: #fb7185; margin-bottom: 20px; text-align: center;}
 .prompt-bar { display: flex; background: rgba(248, 250, 252, 0.8); border-radius: 20px; padding: 15px 30px; border: 1px solid rgba(241, 245, 249, 0.5); margin-bottom: 40px; align-items: center; }
 .prompt-bar input { flex: 1; border: none; background: transparent; outline: none; font-size: 18px; font-family: 'Nanum Gothic', sans-serif; }
+body[data-theme="drive"] .dashboard-logo { color: #0e7490; }
+body[data-theme="space"] .dashboard-logo { color: #c4b5fd; }
+body[data-theme="space"] .prompt-bar {
+    background: rgba(15, 23, 42, 0.62);
+    border-color: rgba(148, 163, 184, 0.26);
+}
+body[data-theme="space"] .prompt-bar input {
+    color: #e2e8f0;
+}
 .card-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 25px; flex: 1; }
 .card-link { text-decoration: none; color: inherit; display: block; height: 100%;}
 .card { height: 100%; padding: 30px; border-radius: 35px; transition: 0.3s; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; box-shadow: 0 10px 20px rgba(0,0,0,0.03);}
 .card:hover { transform: translateY(-10px); box-shadow: 0 15px 30px rgba(0,0,0,0.08); }
+.card { opacity: 0; transform: translateY(16px); }
+.card.entered { opacity: 1; transform: translateY(0); }
 .card h3 { font-size: 26px; margin-bottom: 10px; font-weight: 700;}
 .card p { font-size: 15px; opacity: 0.8; line-height: 1.4; }
 .p-pink { background: rgba(255, 241, 242, 0.9); color: #fb7185; }
@@ -61,6 +106,156 @@ body { background: linear-gradient(-45deg, #fff5f5, #f0f9ff, #faf5ff, #fff9db); 
 .p-purple { background: rgba(245, 243, 255, 0.9); color: #8b5cf6; }
 .p-green { background: rgba(240, 253, 244, 0.9); color: #22c55e; }
 .p-grey { background: rgba(241, 245, 249, 0.9); color: #475569; }
+body[data-theme="drive"] .p-blue,
+body[data-theme="drive"] .p-green {
+    background: rgba(186, 230, 253, 0.9);
+    color: #075985;
+}
+body[data-theme="space"] .card {
+    box-shadow: 0 12px 30px rgba(2, 6, 23, 0.55);
+    border: 1px solid rgba(148, 163, 184, 0.24);
+}
+body[data-theme="space"] .p-pink { background: linear-gradient(160deg, rgba(124, 58, 237, 0.48), rgba(236, 72, 153, 0.45)); color: #f5d0fe; }
+body[data-theme="space"] .p-blue { background: linear-gradient(160deg, rgba(8, 145, 178, 0.5), rgba(30, 64, 175, 0.5)); color: #bae6fd; }
+body[data-theme="space"] .p-yellow { background: linear-gradient(160deg, rgba(161, 98, 7, 0.5), rgba(180, 83, 9, 0.45)); color: #fde68a; }
+body[data-theme="space"] .p-purple { background: linear-gradient(160deg, rgba(67, 56, 202, 0.48), rgba(91, 33, 182, 0.45)); color: #ddd6fe; }
+body[data-theme="space"] .p-green { background: linear-gradient(160deg, rgba(22, 101, 52, 0.52), rgba(5, 150, 105, 0.45)); color: #bbf7d0; }
+body[data-theme="space"] .p-grey { background: linear-gradient(160deg, rgba(71, 85, 105, 0.62), rgba(51, 65, 85, 0.58)); color: #e2e8f0; }
+
+body[data-theme="space"] .card p {
+    opacity: 0.95;
+}
+
+.pm-toast {
+    position: fixed;
+    bottom: 26px;
+    right: 26px;
+    padding: 12px 18px;
+    border-radius: 12px;
+    background: rgba(15, 23, 42, 0.9);
+    color: #ffffff;
+    font-size: 14px;
+    opacity: 0;
+    transform: translateY(10px);
+    transition: opacity 0.25s ease, transform 0.25s ease;
+    pointer-events: none;
+}
+
+.pm-toast.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.schedule-modal[hidden] {
+    display: none !important;
+}
+
+.schedule-modal {
+    position: fixed;
+    inset: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 50;
+}
+
+.schedule-backdrop {
+    position: absolute;
+    inset: 0;
+    background: rgba(15, 23, 42, 0.45);
+}
+
+.schedule-panel {
+    position: relative;
+    z-index: 1;
+    width: min(520px, 90%);
+    background: #ffffff;
+    border-radius: 20px;
+    padding: 24px;
+    box-shadow: 0 24px 48px rgba(2, 6, 23, 0.28);
+}
+
+.schedule-panel h3 {
+    color: #0f172a;
+    margin-bottom: 12px;
+}
+
+.schedule-input-row {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 14px;
+}
+
+.schedule-input-row input {
+    flex: 1;
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+    padding: 10px 12px;
+    font-size: 14px;
+}
+
+.schedule-input-row button,
+.schedule-close,
+.schedule-item button {
+    border: none;
+    border-radius: 10px;
+    background: #fb7185;
+    color: #fff;
+    font-weight: 700;
+    cursor: pointer;
+    padding: 10px 12px;
+}
+
+.schedule-close-icon {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    width: 32px;
+    height: 32px;
+    border: none;
+    border-radius: 999px;
+    background: rgba(148, 163, 184, 0.24);
+    color: #334155;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.schedule-close-icon:hover {
+    background: rgba(148, 163, 184, 0.38);
+}
+
+#scheduleList {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    max-height: 220px;
+    overflow-y: auto;
+    margin-bottom: 16px;
+}
+
+.schedule-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #f8fafc;
+    border-radius: 10px;
+    padding: 10px 12px;
+    color: #334155;
+}
+
+.schedule-item button {
+    padding: 6px 9px;
+    font-size: 12px;
+    background: #e11d48;
+}
+
+.schedule-empty {
+    color: #64748b;
+    background: #f8fafc;
+    border-radius: 10px;
+    padding: 12px;
+}
 
 
 

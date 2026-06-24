@@ -30,15 +30,16 @@
         </div>
         <div class="chat-input-area">
             <div class="ai-suggestions">
-                <button class="suggest-btn">전체 오답노트 보기</button>
-                <button class="suggest-btn">이해 안 가는 부분 질문</button>
+                <button class="suggest-btn" data-action="show-notes">전체 오답노트 보기</button>
+                <button class="suggest-btn" data-action="ask-more">이해 안 가는 부분 질문</button>
             </div>
             <div class="input-box">
-                <input type="text" placeholder="궁금한 게 있으면 더 물어봐!">
-                <button style="border:none; background:none; font-size:24px; cursor:pointer;">🚀</button>
+                <input id="learnInput" type="text" placeholder="궁금한 게 있으면 더 물어봐!">
+                <button id="learnSendBtn" type="button" style="border:none; background:none; font-size:24px; cursor:pointer;">🚀</button>
             </div>
         </div>
     </div>
+    <script src="scripts/learning.js"></script>
 </body>
 </html>
 

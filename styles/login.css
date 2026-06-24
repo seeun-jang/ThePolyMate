@@ -11,4 +11,6 @@ body { background: linear-gradient(-45deg, #fff5f5, #f0f9ff, #faf5ff, #fff9db); 
 .social-btn { padding: 15px; border: none; border-radius: 12px; color: white; font-weight: bold; display: flex; align-items: center; justify-content: center; gap: 10px; font-size: 16px; text-decoration: none;}
 .naver { background: #03c75a; } .google { background: #ea4335; } .apple { background: #000; }
 .input-group input { width: 100%; padding: 15px; margin-bottom: 12px; border: 1px solid #eee; border-radius: 10px; outline: none; font-size: 16px; font-family: 'Nanum Gothic', sans-serif; }
-.btn-login { display: block; width: 100%; padding: 15px; background: #fb7185; color: white; border-radius: 10px; font-size: 18px; font-weight: bold; text-decoration: none;}
+.btn-login { display: block; width: 100%; padding: 15px; background: #fb7185; color: white; border-radius: 10px; font-size: 18px; font-weight: bold; text-decoration: none; border: none; cursor: pointer; }
+.login-msg { margin-top: 12px; min-height: 22px; color: #0f766e; font-size: 14px; }
+.login-msg.error { color: #dc2626; }

@@ -48,9 +48,9 @@
             <header class="main-header">
                 <h1 class="dashboard-logo">Poly-Mate</h1>
                 <div class="prompt-bar">
-                    <input type="text" placeholder="user, 오늘 하루는 어땠어? 나한테 말해줘!">
+                    <input id="dailyInput" type="text" placeholder="user, 오늘 하루는 어땠어? 나한테 말해줘!">
                     <!-- 전송 버튼 말풍선 아이콘 -->
-                    <button style="border: none; background: transparent; cursor: pointer; padding: 5px;">
+                    <button id="dailySendBtn" type="button" style="border: none; background: transparent; cursor: pointer; padding: 5px;">
                         <img src="images/chat.png" alt="전송" style="width: 30px; vertical-align: middle;">
                     </button>
                 </div>
@@ -58,19 +58,19 @@
 
             <div class="card-grid">
                 <!-- 다이어리 섹션 -->
-                <a href="learning.html" class="card-link">
+                <a href="learning.html?topic=study" class="card-link">
                     <div class="card p-pink">
                         <h3><img src="images/books.png" alt="학습" class="icon-img">학습</h3>
                         <p>성취도 그래프 및 맞춤형 오답노트</p>
                     </div>
                 </a>
-                <a href="#" class="card-link">
+                <a href="#" class="card-link" id="scheduleCard">
                     <div class="card p-blue">
                         <h3><img src="images/notebook.png" alt="일정" class="icon-img">일정</h3>
                         <p>스케줄 관리</p>
                     </div>
                 </a>
-                <a href="#" class="card-link">
+                <a href="learning.html?topic=health" class="card-link">
                     <div class="card p-yellow">
                         <h3><img src="images/salad.png" alt="건강" class="icon-img">건강</h3>
                         <p>추천 식단</p>
@@ -96,6 +96,19 @@
                 </a>
             </div>
 
+            <div class="schedule-modal" id="scheduleModal" hidden>
+                <div class="schedule-backdrop" id="scheduleBackdrop"></div>
+                <div class="schedule-panel" role="dialog" aria-modal="true" aria-labelledby="scheduleTitle">
+                    <button id="scheduleCloseBtn" type="button" class="schedule-close-icon" aria-label="일정 창 닫기">X</button>
+                    <h3 id="scheduleTitle">오늘의 일정 관리</h3>
+                    <div class="schedule-input-row">
+                        <input id="scheduleInput" type="text" placeholder="예: 오후 7시 자료구조 복습">
+                        <button id="scheduleAddBtn" type="button">추가</button>
+                    </div>
+                    <ul id="scheduleList"></ul>
+                </div>
+            </div>
+
             <!-- 아이콘에 쓴 출처 -->
             <footer style="margin-top: 60px; padding-bottom: 20px; text-align: center; font-size: 11px; color: #a0a0a0;">
                 <details style="cursor: pointer;">
@@ -116,6 +129,7 @@
             </footer>
         </main>
     </div>
+    <script src="scripts/main.js"></script>
 </body>
 </html>
 

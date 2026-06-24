@@ -11,21 +11,23 @@
     <div class="theme-selection">
         <h2>테마 선택하기</h2>
         <div class="theme-grid">
-            <a href="#" class="theme-card t-home">
+            <a href="#" class="theme-card t-home" data-theme="home">
                 <div class="preview-box"></div>
                 <p>기본</p>
             </a>
-            <a href="#" class="theme-card t-drive">
+            <a href="#" class="theme-card t-drive" data-theme="drive">
                 <div class="preview-box"></div>
                 <p>여행</p>
             </a>
-            <a href="#" class="theme-card t-space">
+            <a href="#" class="theme-card t-space" data-theme="space">
                 <div class="preview-box"></div>
                 <p>우주</p>
             </a>
         </div>
+        <p class="theme-status" id="themeStatus">원하는 테마를 선택하면 자동 저장됩니다.</p>
         <a href="main.html" class="btn-back">◀ 닫기</a>
     </div>
+    <script src="scripts/theme.js"></script>
 </body>
 </html>
 
