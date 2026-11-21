@@ -1,13 +1,6 @@
-import {
-  BookOpen,
-  CalendarDays,
-  Heart,
-  Sparkles,
-  Check,
-  ShieldCheck,
-  Palette,
-} from "lucide-react";
+import { Sparkles, Check, ShieldCheck } from "lucide-react";
 import { Brand, Mascot, FeatureIcon, Credits } from "../components/UI.jsx";
+import { CategoryGlyph } from "../components/Icons.jsx";
 
 export default function StartPage({ onGuest, name }) {
   return (
@@ -63,7 +56,7 @@ export default function StartPage({ onGuest, name }) {
           </div>
           <div className="floating-note note-study">
             <span className="note-icon rose">
-              <BookOpen size={22} />
+              <CategoryGlyph name="study" size={24} />
             </span>
             <div>
               <strong>한 걸음씩 배우는 중</strong>
@@ -75,7 +68,7 @@ export default function StartPage({ onGuest, name }) {
           </div>
           <div className="floating-note note-schedule">
             <span className="note-icon blue">
-              <CalendarDays size={22} />
+              <CategoryGlyph name="schedule" size={24} />
             </span>
             <div>
               <small>오늘의 작은 약속</small>
@@ -85,7 +78,7 @@ export default function StartPage({ onGuest, name }) {
             </div>
           </div>
           <div className="floating-note note-health">
-            <Heart size={22} />
+            <CategoryGlyph name="health" size={23} />
             <span>쉬어가도 괜찮아.</span>
           </div>
           <div className="scene-label">your everyday companion</div>
@@ -108,7 +101,7 @@ export default function StartPage({ onGuest, name }) {
         </div>
         <div>
           <span className="feature-icon themes">
-            <Palette size={24} />
+            <CategoryGlyph name="themes" size={24} />
           </span>
           <span>
             <strong>나를 닮은 세 가지 테마</strong>

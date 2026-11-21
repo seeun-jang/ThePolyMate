@@ -1,15 +1,6 @@
 import { useEffect, useId, useRef } from "react";
-import {
-  X,
-  Check,
-  Sparkles,
-  BookOpen,
-  CalendarDays,
-  Heart,
-  Lightbulb,
-  Plane,
-  NotebookPen,
-} from "lucide-react";
+import { X, Check, Sparkles } from "lucide-react";
+import { CategoryGlyph } from "./Icons.jsx";
 
 export const asset = (name) => `${import.meta.env.BASE_URL}images/${name}`;
 export function Mascot({ className = "" }) {
@@ -38,19 +29,10 @@ export function Brand({ light = false }) {
     </a>
   );
 }
-export const featureIcons = {
-  study: BookOpen,
-  schedule: CalendarDays,
-  health: Heart,
-  ideas: Lightbulb,
-  trips: Plane,
-  diary: NotebookPen,
-};
 export function FeatureIcon({ name, size = 24 }) {
-  const Icon = featureIcons[name] || Sparkles;
   return (
     <span className={`feature-icon ${name}`}>
-      <Icon size={size} strokeWidth={1.8} aria-hidden="true" />
+      <CategoryGlyph name={name} size={size} />
     </span>
   );
 }

@@ -1,14 +1,6 @@
-import {
-  Home,
-  BookOpen,
-  Heart,
-  Palette,
-  NotebookPen,
-  LogOut,
-  Sparkles,
-  CalendarDays,
-} from "lucide-react";
+import { LogOut, Sparkles } from "lucide-react";
 import { Brand, Credits, Mascot } from "./UI.jsx";
+import { CategoryGlyph } from "./Icons.jsx";
 import { useClock } from "../lib/hooks.js";
 
 export default function Layout({ data, route, openModal, children, onLogout }) {
@@ -17,19 +9,19 @@ export default function Layout({ data, route, openModal, children, onLogout }) {
     {
       href: "/dashboard",
       label: "내 대시보드",
-      icon: Home,
+      icon: "home",
       active: route.path === "/dashboard",
     },
     {
       href: "/learning?topic=study",
       label: "학습 메이트",
-      icon: BookOpen,
+      icon: "study",
       active: route.path === "/learning" && route.topic === "study",
     },
     {
       href: "/learning?topic=health",
       label: "건강 메이트",
-      icon: Heart,
+      icon: "health",
       active: route.path === "/learning" && route.topic === "health",
     },
   ];
@@ -50,24 +42,24 @@ export default function Layout({ data, route, openModal, children, onLogout }) {
         <p className="sidebar-caption">내 하루의 다정한 메이트</p>
         <div className="nav-label">MY SPACE</div>
         <nav aria-label="주요 메뉴">
-          {links.map(({ href, label, icon: Icon, active }) => (
+          {links.map(({ href, label, icon, active }) => (
             <a
               key={href}
               href={`#${href}`}
               className={`nav-item ${active ? "active" : ""}`}
               aria-current={active ? "page" : undefined}
             >
-              <Icon size={20} />
+              <CategoryGlyph name={icon} size={22} />
               {label}
               {active && <span className="nav-active-dot" />}
             </a>
           ))}
           <button className="nav-item" onClick={() => openModal("schedule")}>
-            <CalendarDays size={20} />
+            <CategoryGlyph name="schedule" size={22} />
             일정 관리
           </button>
           <button className="nav-item" onClick={() => openModal("diary")}>
-            <NotebookPen size={20} />
+            <CategoryGlyph name="diary" size={22} />
             나의 기록
           </button>
         </nav>
@@ -85,7 +77,7 @@ export default function Layout({ data, route, openModal, children, onLogout }) {
             className={`nav-item ${route.path === "/themes" ? "active" : ""}`}
             aria-current={route.path === "/themes" ? "page" : undefined}
           >
-            <Palette size={20} />
+            <CategoryGlyph name="themes" size={22} />
             나만의 테마
           </a>
           <button className="nav-item" onClick={onLogout}>

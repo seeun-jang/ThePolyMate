@@ -1,0 +1,35 @@
+.category-glyph {
+  overflow: visible;
+}
+.feature-icon {
+  width: 46px;
+  height: 46px;
+  border-radius: 16px;
+  border: 1px solid color-mix(in srgb, currentColor 12%, transparent);
+  background-image: linear-gradient(145deg, #ffffff6b, #ffffff00 75%);
+  box-shadow:
+    inset 0 1px 0 #ffffff9c,
+    0 3px 7px #4e3b5704;
+}
+[data-theme="space"] .feature-icon {
+  background-image: linear-gradient(145deg, #ffffff08, #ffffff00 75%);
+  box-shadow: inset 0 1px 0 #ffffff09;
+}
+.nav-item > .category-glyph {
+  opacity: 0.85;
+  transition: opacity 0.2s ease;
+}
+.nav-item.active > .category-glyph,
+.nav-item:hover > .category-glyph {
+  opacity: 1;
+}
+.note-icon {
+  border: 1px solid color-mix(in srgb, currentColor 12%, transparent);
+}
+@media (max-width: 760px) {
+  .feature-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 14px;
+  }
+}
